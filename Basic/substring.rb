@@ -1,7 +1,7 @@
 def substrings (text, dict)
   res = {}
   dict.each do |word|
-    qtd = (text.length - text.gsub(word,"").length) / word.length
+    qtd = (text.length - text.downcase.gsub(word.downcase,"").length) / word.length
     if qtd > 0
       res[word] = qtd
     end
