@@ -1,0 +1,6 @@
+rounds = 0
+until check_winner(board) or rounds > 9
+  change_player
+  round(board, player_mark, player_number)
+  rounds += 1
+end
